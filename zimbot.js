@@ -69,9 +69,9 @@ const setting = JSON.parse(fs.readFileSync('./apikey.json'))
 
 //buat info zvibhorani zivi
 limitawal = '100'
-botname = 'ZIM BOT INC'
-wm = 'ZIM BOT INC'
-global.reactmoji = '🇿🇼'
+botname = 'SxyoBotz-MD'
+wm = 'SxyoBotz'
+global.reactmoji = '🤖'
 limitCount = setting.limit
 
 //read database
@@ -257,8 +257,8 @@ if(time2 < "05:00:00"){
 var ucapannya2 = `Good morning 🌅`
 }
 
-global.botdev = ['27634090203','447441437150']
-global.bothelp = ['918188019676']
+global.botdev = ['6287793236775','6287793236775']
+global.bothelp = ['6287793236775']
 
 //function rpg
    const { 
@@ -384,7 +384,7 @@ randek = jsonDrips[randIndex];
             if (typeof chats !== 'object') global.db.data.chats[m.chat] = {}
             if (chats) {
                 if (!('mute' in chats)) chats.mute = false
-                if (!('antilink' in chats)) chats.antilink = false
+                if (!('antilink' in chats)) chats.antilink = true
                 if (!('antilinkyt' in chats)) chats.antilinkyt = false
                 if (!('autoblock' in chats)) chats.autoblock = false
                 if (!('isWecome' in chats)) chats.isWelcome = true
@@ -401,7 +401,7 @@ randek = jsonDrips[randIndex];
             } else global.db.data.chats[m.chat] = {
                 mute: false,
                 wame: false,
-                antilink: false,
+                antilink: true,
                 antilinkyt: false,
                 isWelcome: true,
                 antilinkall: false,
@@ -435,10 +435,10 @@ randek = jsonDrips[randIndex];
         if (!('templateDoc' in setting)) setting.templateDoc = false
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
-		autobio: false,
+		autobio: true,
 		templateImage: false,
-		templateLocation: false,
-		templateGif: true,
+		templateLocation: true,
+		templateGif: false,
 		templateMsg: false,
 		templateList: false,
 		templateDoc: false,
@@ -638,7 +638,7 @@ ZimBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		await ZimBotInc.setStatus(`ZIM-BOT-INC| BOT ONLINE: ${runtime(uptime)}`)
+		await SxyoBotz-MD.setStatus(`Sxyo| BOT ONLINE: ${runtime(uptime)}`)
 		setting.status = new Date() * 1
 	    }
 	}
